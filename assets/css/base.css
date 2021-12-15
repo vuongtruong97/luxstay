@@ -1,9 +1,11 @@
 :root {
   --text-color: #222222;
+  --text-hover-color: #f65e39;
+  --logo-color: #555;
 }
 
 ::-webkit-input-placeholder {
-  color: black;
+  color: var(--text-color);
 }
 html {
   font-family: "Poppins", sans-serif;
@@ -13,4 +15,21 @@ html {
 }
 * {
   box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+}
+
+/* Animation */
+@keyframes hover {
+  from {
+    color: var(--text-color);
+  }
+  to {
+    color: var(--text-hover-color);
+  }
+}
+/* Responsive */
+.grid {
+  width: 1300px;
 }

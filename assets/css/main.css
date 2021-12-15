@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1500px;
+  width: 1536px;
 }
 .header-left-section {
   display: flex;
@@ -21,8 +21,17 @@
   width: 70px;
   height: 70px;
   padding: 10px;
-  background-color: #ccc;
+  background: rgba(0, 0, 0, 0.04);
   border-radius: 50%;
+  color: var(--text-color);
+}
+.header-left-section__logo:hover {
+  color: var(--text-hover-color);
+  animation: hover linear 0.3s;
+}
+.header-left-section__logo-svg {
+  fill: currentColor;
+  stroke: none;
 }
 .header-left-section__search {
   margin-left: 20px;
@@ -31,31 +40,50 @@
   border: 1px solid #ddd;
   border-radius: 0.5rem;
   height: 50px;
+  width: 600px;
   padding: 5px;
   box-shadow: 1px 1px 4px rgba(0 0 0 / 20%);
+}
+.header-left-section__search-input {
+  flex: 1;
+}
+.header-left-section__search-input input {
+  border: none;
+  outline: none;
 }
 .header-left-section-input {
   border: none;
   outline: none;
-  flex: 1;
 }
 .header-left-section__search-input-icon {
-  margin-left: 10px;
+  margin: 0 5px 0 10px;
+  font-size: 1.5rem;
   color: #a5a5a5;
 }
-.header-left-section__search-date {
-  padding: 0 15px;
+.header-left-section__search-filter {
+  width: 115px;
+  border-left: 1px solid rgb(230, 230, 230);
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 500;
+  color: var(--text-color);
+  cursor: pointer;
 }
-.header-left-section__search-guest {
-  padding: 0 15px;
+.header-left-section__search-filter-icon {
+  padding-right: 10px;
 }
+
 .header-left-section__search-btn {
-  height: 40px;
-  padding: 0 25px;
+  height: 35px;
+  width: 55px;
   border: none;
   background-color: #555;
   border-radius: 0.5rem;
   color: #fff;
+  cursor: pointer;
+}
+.header-left-section__search-btn-icon {
+  font-size: 1.6rem;
 }
 
 .header-right-section {
@@ -65,13 +93,66 @@
 }
 .header-right-section__nav-list {
   display: flex;
+  align-items: center;
 }
 .header-right-section__nav-list-item {
   display: block;
+  padding: 0 15px;
+  font-weight: 500;
 }
+.header-right-section__nav-list-item-link {
+  position: relative;
+  color: var(--text-color);
+}
+.header-right-section__nav-list-item-link-mark::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -7px;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fb9236;
+}
+.header-right-section__nav-list-item-link:hover {
+  color: var(--text-hover-color);
+  animation: hover linear 0.2s;
+}
+
 .nav__item-country {
+  background-color: #f6f6f6;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 25px 5px 5px;
+  border-radius: 2rem;
 }
 .nav__item-country-img {
+  width: 25px;
+  height: 25px;
+  background: url(../img/2560px-Flag_of_Vietnam.svg.png) no-repeat center /
+    cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.nav__item-country-name {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.nav__item-country-name::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-25%);
+  z-index: 1;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000 transparent transparent;
 }
 
 .header-right-section__nav-list-item.nav__item-country {
