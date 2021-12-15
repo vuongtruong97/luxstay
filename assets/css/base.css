@@ -1,0 +1,16 @@
+:root {
+  --text-color: #222222;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+}
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  line-height: 1.6rem;
+}
+* {
+  box-sizing: inherit;
+}

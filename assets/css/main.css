@@ -1,0 +1,78 @@
+.header {
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  font-size: 1.4rem;
+}
+.header-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1500px;
+}
+.header-left-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-left-section__logo {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+.header-left-section__search {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  height: 50px;
+  padding: 5px;
+  box-shadow: 1px 1px 4px rgba(0 0 0 / 20%);
+}
+.header-left-section-input {
+  border: none;
+  outline: none;
+  flex: 1;
+}
+.header-left-section__search-input-icon {
+  margin-left: 10px;
+  color: #a5a5a5;
+}
+.header-left-section__search-date {
+  padding: 0 15px;
+}
+.header-left-section__search-guest {
+  padding: 0 15px;
+}
+.header-left-section__search-btn {
+  height: 40px;
+  padding: 0 25px;
+  border: none;
+  background-color: #555;
+  border-radius: 0.5rem;
+  color: #fff;
+}
+
+.header-right-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-right-section__nav-list {
+  display: flex;
+}
+.header-right-section__nav-list-item {
+  display: block;
+}
+.nav__item-country {
+}
+.nav__item-country-img {
+}
+
+.header-right-section__nav-list-item.nav__item-country {
+}
