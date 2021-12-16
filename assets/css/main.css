@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
   border-bottom: 1px solid #ddd;
   display: flex;
   justify-content: center;
@@ -154,6 +159,64 @@
   border-style: solid;
   border-color: #000 transparent transparent;
 }
+/* CONTAINER */
+.container {
+  margin-top: 120px;
+}
+/* Slider */
+.container__slider {
+  height: 290px;
+  background: url(../photo/slider/file.png) no-repeat center / cover;
+  border-radius: 2rem;
+  margin-bottom: 30px;
+}
+/* Intro */
+.container__content-intro {
+  display: flex;
+  flex-direction: column;
+}
+.container__content-intro span {
+  padding: 5px;
+}
+.container__content-intro a {
+  color: #000;
+  text-decoration: underline;
+  margin: 0 5px;
+}
+.container__content-intro a:hover {
+  color: var(--text-hover-color);
+  animation: hover linear 0.2s;
+}
+/* Place List */
+.container__content-place-list {
+  margin-top: 50px;
+}
 
-.header-right-section__nav-list-item.nav__item-country {
+.container__content-place {
+  margin-top: 20px;
+  position: relative;
+  height: 300px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.container__content-place-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container__content-place-about {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: #fff;
+}
+.container__content-place-name {
+  font-size: 2.3rem;
+}
+.container__content-place-description {
+  font-size: 1.5rem;
+}
+.place__room-quantity {
+  font-size: 1.8rem;
+  margin-right: 10px;
 }
