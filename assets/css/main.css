@@ -53,10 +53,12 @@
 .header-left-section__search-input {
   flex: 1;
 }
+
 .header-left-section__search-input input {
   border: none;
   outline: none;
 }
+
 .header-left-section-input {
   border: none;
   outline: none;
@@ -240,4 +242,114 @@
 }
 .container__content-suggest-details {
   font-size: 1.5rem;
+}
+.tour-suggest-img {
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 260px;
+}
+.tour-suggest-content {
+  position: relative;
+}
+.tour-suggest-title {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 3px 10px;
+  border-radius: 5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fcfcfc;
+  cursor: pointer;
+}
+.tour-suggest-title:hover {
+  background-color: rgba(0, 0, 0, 0.774);
+}
+.tour-sugges-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  position: absolute;
+  font-size: 1.6rem;
+  bottom: 10%;
+  left: 5%;
+  color: #fcfcfc;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  text-shadow: 2px 1px 1px #000;
+  cursor: pointer;
+}
+
+.app-user-manual-img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.container__app-about {
+}
+
+.app-about__left-logo {
+  margin-bottom: 20px;
+}
+.app-about__left-logo svg {
+  height: 70px;
+}
+.app-about__left-slogan {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+.app-about__left-details {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.app-about__left-dowload {
+  margin-top: 80px;
+}
+.app-about__left-dowload-qr {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.app-about__left-download-store-img {
+  padding: 10px;
+}
+
+.footer__content-item {
+}
+.footer__content-item-logo {
+  width: 70%;
+}
+.footer__content-item-content {
+  height: 36px;
+  list-style-type: none;
+  padding: none;
+}
+.footer__content-item-message-img {
+}
+.footer__content-item-content-details {
+}
+.footer__content-item-content-details h6 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.footer__link {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #000;
+}
+.footer__link:hover {
+  color: var(--text-hover-color);
+  animation: hover linear 0.2s;
+}
+
+.footer__content-item-topic {
+}
+.footer__content-item-list {
+  padding: none;
 }
