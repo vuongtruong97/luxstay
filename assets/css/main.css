@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  z-index: 9999;
   top: 0;
   left: 0;
   right: 0;
@@ -172,8 +173,6 @@
 }
 /* Intro */
 .container__content-intro {
-  display: flex;
-  flex-direction: column;
 }
 .container__content-intro span {
   padding: 5px;
@@ -181,19 +180,19 @@
 .container__content-intro a {
   color: #000;
   text-decoration: underline;
-  margin: 0 5px;
+  margin: 0 4px;
 }
 .container__content-intro a:hover {
   color: var(--text-hover-color);
   animation: hover linear 0.2s;
 }
+
 /* Place List */
 .container__content-place-list {
   margin-top: 50px;
 }
 
 .container__content-place {
-  margin-top: 20px;
   position: relative;
   height: 300px;
   border-radius: 0.5rem;
@@ -219,4 +218,26 @@
 .place__room-quantity {
   font-size: 1.8rem;
   margin-right: 10px;
+}
+.container__content-item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.container__content-item-title-right {
+  display: inline !important;
+  color: var(--text-hover-color);
+  margin-bottom: 30px;
+}
+.container__content-item-img {
+  border-radius: 1rem;
+}
+.container__content-suggest {
+  color: #555;
+}
+.container__content-suggest-title {
+  font-size: 1.6rem;
+}
+.container__content-suggest-details {
+  font-size: 1.5rem;
 }
