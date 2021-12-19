@@ -40,6 +40,7 @@
   stroke: none;
 }
 .header-left-section__search {
+  position: relative;
   margin-left: 20px;
   display: flex;
   align-items: center;
@@ -52,9 +53,12 @@
 }
 .header-left-section__search-input {
   flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 .header-left-section__search-input input {
+  flex: 1;
   border: none;
   outline: none;
 }
@@ -69,6 +73,8 @@
   color: #a5a5a5;
 }
 .header-left-section__search-filter {
+  border: none;
+  background: #fff;
   width: 115px;
   border-left: 1px solid rgb(230, 230, 230);
   padding: 10px 0;
@@ -77,8 +83,190 @@
   color: var(--text-color);
   cursor: pointer;
 }
+
+/* Calender */
+.header-left-section__search-filter-date-calender {
+  --calender-width: 700px;
+  width: var(--calender-width);
+  display: none;
+  height: 390px;
+  background-color: #fff;
+  position: absolute;
+  top: calc(100% + 9px);
+  left: 0;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 13px 1px #ddd;
+  cursor: default;
+  animation: fadeIn linear 0.5s;
+}
+
+.search-filter-date-calender__datepicker {
+  position: relative;
+}
+.date-calender__datepicker__btn {
+  position: absolute;
+  top: 12px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.date-calender__datepicker__btn:hover {
+  border: 1px solid #ccc;
+}
+.date-calender__datepicker__btn-previous {
+  left: 16px;
+}
+.date-calender__datepicker__btn-next {
+  right: 16px;
+}
+.date-calender__datepicker-days-of-week {
+  top: 50px;
+  width: 50%;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around !important;
+  position: absolute;
+}
+.date-calender__datepicker-day {
+  font-size: 1.1rem;
+}
+.calender__datepicker-months {
+  display: flex;
+  flex-direction: row;
+}
+.calender__datepicker-month {
+  padding: 16px;
+  width: 50%;
+}
+.calender__datepicker-month__name {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 10px 0 45px;
+}
+.calender__datepicker-dates {
+  /* width: 50%; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -1px;
+  margin-right: -1px;
+}
+.calender__datepicker-date {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1px;
+  width: calc(100% / 7);
+  height: 40px;
+  background: #fff;
+  border: 1px solid #fff;
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+.calender__datepicker-date-active::before,
+.calender__datepicker-date-inactive::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: currentColor;
+  opacity: 0.2;
+}
+.calender__datepicker-date-active {
+  cursor: pointer;
+  color: rgb(47, 161, 47);
+}
+.calender__datepicker-date-inactive {
+  color: rgb(202, 202, 202);
+}
+
 .header-left-section__search-filter-icon {
   padding-right: 10px;
+}
+.calender__datepicker__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.header__search-filter-delete-btn {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.header__search-filter-delete-btn-confirm {
+  color: #f65e39;
+}
+.header__search-filter-delete-btn:hover {
+  text-decoration: underline;
+}
+/* End Calender */
+
+/* Begin Guest quantity-option */
+.header-left-section__search-filter-guest-quantity {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 55%;
+  display: none;
+  flex-direction: column;
+  width: 320px;
+  background-color: #fff;
+  padding: 12px;
+  box-shadow: 1px 1px 15px 1px #ddd;
+  border-radius: 0.5rem;
+  transform-origin: center top;
+  animation: fadeIn linear 0.5s;
+}
+.guest-quantity__option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 40px; */
+  margin: 11px 0;
+}
+.guest-quantity__option__name {
+}
+.guest-quantity__option__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.guest-quantity__option__sub-title {
+  font-size: 1.1rem;
+}
+.guest-quantity__option__control {
+}
+.guest-quantity__option__control span {
+  margin: 0 12px;
+  font-size: 1.6rem;
+}
+.option__control--decrease,
+.option__control--increase {
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0.4;
+  cursor: no-drop;
+}
+.option__control--decrease-active,
+.option__control--increase-active {
+  opacity: 1;
+  cursor: pointer;
+}
+.option__control--decrease-active:hover,
+.option__control--increase-active:hover {
+  color: #f65e39;
+  animation: hover linear 0.2s;
 }
 
 .header-left-section__search-btn {
@@ -129,6 +317,7 @@
 }
 
 .nav__item-country {
+  position: relative;
   background-color: #f6f6f6;
   height: 35px;
   display: flex;
@@ -164,7 +353,7 @@
 }
 /* CONTAINER */
 .container {
-  margin-top: 120px;
+  padding-top: 120px;
 }
 /* Slider */
 .container__slider {

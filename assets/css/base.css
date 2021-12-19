@@ -57,6 +57,14 @@ img {
     color: var(--text-hover-color);
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* Responsive */
 .grid {
   width: 1300px;
@@ -84,4 +92,11 @@ img {
 .col-1-2 {
   width: 50%;
   padding: 0 9px;
+}
+/* js-class */
+.show {
+  display: block !important;
+}
+.show--flex {
+  display: flex !important;
 }
