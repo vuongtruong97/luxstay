@@ -642,3 +642,34 @@
 .footer__content-item-list {
   padding: none;
 }
+.alo__phone {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+}
+.alo__phone-background {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  background-color: #ccc;
+  border-radius: 50%;
+  animation: breath linear 2s infinite 0s;
+}
+.alo__phone-icon {
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  left: auto;
+  top: 19%;
+  right: 19%;
+
+  width: 75px;
+  height: 75px;
+  background: url(../img/icon__phone.png) no-repeat center / cover;
+  animation: shake linear 1s infinite 0s;
+}
