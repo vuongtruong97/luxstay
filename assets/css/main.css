@@ -244,6 +244,8 @@
   font-size: 1.1rem;
 }
 .guest-quantity__option__control {
+  display: flex;
+  align-items: center;
 }
 .guest-quantity__option__control span {
   margin: 0 12px;
@@ -257,6 +259,9 @@
   border-radius: 50%;
   opacity: 0.4;
   cursor: no-drop;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .option__control--decrease-active,
 .option__control--increase-active {
@@ -315,6 +320,100 @@
   color: var(--text-hover-color);
   animation: hover linear 0.2s;
 }
+/* Currency-option */
+
+.nav__item-country__currency-box {
+  position: absolute;
+  display: none;
+  right: 0;
+  top: calc(100% + 15px);
+  box-shadow: 3px 5px 15px -5px rgb(180, 180, 180);
+  background-color: #fff;
+  width: 470px;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  cursor: default;
+  animation: fadeIn linear 0.4s;
+}
+.currency-box__wrap {
+  padding: 8px 16px;
+  position: relative;
+  display: flex;
+  background-color: #fff;
+  border-radius: inherit;
+}
+.nav__item-country__currency-box::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+}
+
+.currency-box__language {
+  padding: 0 8px;
+  flex: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ddd;
+}
+.currentcy-box__language__option {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+.currentcy-box__language__option:hover {
+  color: var(--text-hover-color);
+  animation: hover linear 0.3s;
+}
+.currentcy-box__language__option-ensign {
+  width: 18px;
+  height: 18px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+.currentcy-box__language__option-name {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.currency-box__unit {
+  flex: 1;
+  padding: 0 8px;
+}
+.currency-box__unit-option {
+  padding: 8px 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+}
+.currency-box__unit-option:hover {
+  color: var(--text-hover-color);
+  animation: hover linear 0.3s;
+}
+.currency-box__unit-symbol {
+  font-size: 1.7rem;
+  margin-right: 16px;
+}
+.currency-box__unit-name {
+  padding-right: 16px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+/* End Currency */
 
 .nav__item-country {
   position: relative;
@@ -325,6 +424,7 @@
   justify-content: space-between;
   padding: 5px 25px 5px 5px;
   border-radius: 2rem;
+  cursor: pointer;
 }
 .nav__item-country-img {
   width: 25px;

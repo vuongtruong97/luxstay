@@ -761,6 +761,58 @@
               <li class="header-right-section__nav-list-item nav__item-country">
                 <div class="nav__item-country-img"></div>
                 <span class="nav__item-country-name">VND</span>
+                <div class="nav__item-country__currency-box">
+                  <div class="currency-box__wrap">
+                    <div class="currency-box__language">
+                      <div class="currentcy-box__language__option">
+                        <img
+                          src="https://flagicons.lipis.dev/flags/4x3/vn.svg"
+                          alt=""
+                          class="currentcy-box__language__option-ensign"
+                        />
+                        <span class="currentcy-box__language__option-name"
+                          >Tiếng Việt</span
+                        >
+                        <i class="fas fa-check"></i>
+                      </div>
+                      <div class="currentcy-box__language__option">
+                        <img
+                          src="https://flagicons.lipis.dev/flags/4x3/gb-eng.svg"
+                          alt=""
+                          class="currentcy-box__language__option-ensign"
+                        />
+                        <span class="currentcy-box__language__option-name"
+                          >English</span
+                        >
+                      </div>
+                      <div class="currentcy-box__language__option">
+                        <img
+                          src="https://flagicons.lipis.dev/flags/4x3/kr.svg"
+                          alt=""
+                          class="currentcy-box__language__option-ensign"
+                        />
+                        <span class="currentcy-box__language__option-name"
+                          >Korea</span
+                        >
+                      </div>
+                    </div>
+                    <div class="currency-box__unit">
+                      <div class="currency-box__unit-option">
+                        <span class="currency-box__unit-symbol">VND</span>
+                        <span class="currency-box__unit-name"
+                          >Việt Nam Đồng</span
+                        >
+                        <i class="fas fa-check"></i>
+                      </div>
+                      <div class="currency-box__unit-option">
+                        <span class="currency-box__unit-symbol">USD</span>
+                        <span class="currency-box__unit-name"
+                          >United State Dollar</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -1290,6 +1342,16 @@
     const userGuestFilter = document.querySelector(
       ".header-left-section__search-filter-guest-quantity"
     );
+    const currencyBtn = document.querySelector(".nav__item-country");
+    const currencyBox = document.querySelector(
+      ".nav__item-country__currency-box"
+    );
+    function showCurrencyBox() {
+      currencyBox.classList.add("show");
+    }
+    function hiddenCurrencyBox() {
+      currencyBox.classList.remove("show");
+    }
     function showDatePicker() {
       datePicker.classList.add("show");
     }
@@ -1303,9 +1365,11 @@
       userGuestFilter.classList.remove("show--flex");
     }
 
+    currencyBtn.addEventListener("click", showCurrencyBox);
     userGuestBtn.addEventListener("click", showUserFilter);
 
     dateBtn.addEventListener("click", showDatePicker);
+    container.addEventListener("click", hiddenCurrencyBox);
     container.addEventListener("click", hiddenDatePicker);
     container.addEventListener("click", hiddenUserFilter);
     dateBtn.addEventListener("click", function (event) {
